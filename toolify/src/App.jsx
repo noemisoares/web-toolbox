@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Home from "./pages/Home";
 import Compress from "./pages/Compress";
 import QrCode from "./pages/QrCode";
