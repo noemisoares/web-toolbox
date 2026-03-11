@@ -1,0 +1,63 @@
+/* File Uploader Styles */
+.file-uploader {
+  border: 2px dashed var(--color-border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-2xl);
+  text-align: center;
+  transition: all var(--transition-base);
+  cursor: pointer;
+  background-color: var(--color-surface);
+}
+
+.file-uploader:hover {
+  border-color: var(--color-accent);
+  background-color: var(--color-surface-hover);
+}
+
+.file-uploader.drag-active {
+  border-color: var(--color-accent);
+  background-color: rgba(124, 58, 237, 0.05);
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+}
+
+.file-input {
+  display: none;
+}
+
+.uploader-content {
+  pointer-events: none;
+}
+
+.uploader-icon {
+  font-size: 2.5rem;
+  color: var(--color-accent);
+  margin-bottom: var(--spacing-md);
+}
+
+.uploader-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.uploader-text {
+  color: var(--color-text-primary);
+  font-weight: 500;
+  margin: 0;
+}
+
+.uploader-subtext {
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .file-uploader {
+    padding: var(--spacing-lg);
+  }
+
+  .uploader-icon {
+    font-size: 1.875rem;
+  }
+}

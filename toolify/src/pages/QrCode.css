@@ -1,0 +1,37 @@
+/* QR Code Page Styles */
+.qr-preview {
+  display: flex;
+  justify-content: center;
+  margin: var(--spacing-2xl) 0;
+}
+
+.qr-box {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+}
+
+.qr-box canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Color Input Styling */
+input[type='color'] {
+  width: 100%;
+  max-width: 150px;
+  height: 50px;
+  cursor: pointer;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+input[type='color']:hover {
+  border-color: var(--color-accent);
+}

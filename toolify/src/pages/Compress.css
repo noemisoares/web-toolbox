@@ -1,0 +1,43 @@
+/* Compress Page Styles */
+.compress-stats {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  margin: var(--spacing-lg) 0;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.stat-label {
+  color: var(--color-text-secondary);
+}
+
+.stat-value {
+  color: var(--color-success);
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.file-size {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  margin-top: var(--spacing-sm);
+}
+
+input[type='range'] {
+  width: 100%;
+  max-width: 500px;
+  cursor: pointer;
+}
+
+input[type='range']:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

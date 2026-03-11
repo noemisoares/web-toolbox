@@ -1,0 +1,78 @@
+/* Base64 Tool Styles */
+.base64-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+  margin: var(--spacing-lg) 0 var(--spacing-2xl) 0;
+}
+
+@media (max-width: 1024px) {
+  .base64-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.base64-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.base64-section .form-group {
+  margin-bottom: var(--spacing-lg);
+}
+
+.base64-section textarea,
+.base64-result textarea {
+  font-family: 'Courier New', monospace;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  min-height: 200px;
+  padding: var(--spacing-md);
+  color: var(--color-text-primary);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  resize: vertical;
+}
+
+.base64-section textarea:focus,
+.base64-result textarea:focus {
+  border-color: var(--color-accent);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+}
+
+.base64-result textarea {
+  user-select: text;
+}
+
+.base64-outputs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.base64-result {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+}
+
+.base64-result h3 {
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.base64-result textarea {
+  margin-bottom: var(--spacing-md);
+}
+
+@media (max-width: 768px) {
+  .base64-section textarea {
+    min-height: 150px;
+  }
+}

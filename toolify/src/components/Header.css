@@ -1,0 +1,104 @@
+/* Header Styles */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.header-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: var(--spacing-md) var(--spacing-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+  flex-shrink: 0;
+}
+
+.logo-button {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  background: none;
+  border: none;
+  color: var(--color-accent);
+  font-size: 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color var(--transition-base);
+  padding: var(--spacing-sm);
+  border-radius: var(--radius-md);
+}
+
+.logo-button:hover {
+  color: var(--color-accent-light);
+}
+
+.header-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  padding: var(--spacing-sm);
+}
+
+.header-nav {
+  display: flex;
+  gap: var(--spacing-lg);
+  align-items: center;
+}
+
+.header-nav a {
+  color: var(--color-text-primary);
+  text-decoration: none;
+  font-weight: 500;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+}
+
+.header-nav a:hover {
+  color: var(--color-accent);
+  background-color: var(--color-surface-hover);
+}
+
+@media (max-width: 768px) {
+  .header-menu-toggle {
+    display: block;
+  }
+
+  .header-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    flex-direction: column;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-base);
+  }
+
+  .header-nav.open {
+    max-height: 500px;
+  }
+
+  .header-nav a {
+    border-radius: 0;
+    width: 100%;
+    padding: var(--spacing-md) var(--spacing-lg);
+  }
+
+  .header-container {
+    padding: var(--spacing-md);
+  }
+}
